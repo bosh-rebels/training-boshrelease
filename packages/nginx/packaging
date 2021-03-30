@@ -1,0 +1,11 @@
+set -e
+
+tar zxf nginx-1.18.0.tar.gz
+cd nginx-1.18.0
+./configure
+--prefix=${BOSH_INSTALL_TARGET}
+--with-pcre=../pcre
+--with-zlib=../zlib
+--with-openssl=../openssl
+make
+make install
