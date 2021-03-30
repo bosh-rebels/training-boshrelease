@@ -1,11 +1,33 @@
 set -e
 
+tar -zxf zlib-1.2.11.tar.gz
+pushd zlib-1.2.11
+./configure --prefix=${BOSH_INSTALL_TARGET}
+make
+make install
+popd
+
+tar -zxf openssl-1.1.1g.tar.gz
+pushd openssl-1.1.1g
+./Configure linux-x86_64 --prefix=${BOSH_INSTALL_TARGET}
+make
+make install
+popd
+
+tar -zxf pcre-8.44.tar.gz
+pushd pcre-8.44
+./configure --prefix=${BOSH_INSTALL_TARGET}
+make
+make install
+popd
+
 tar zxf nginx-1.18.0.tar.gz
-cd nginx-1.18.0
-./configure
---prefix=${BOSH_INSTALL_TARGET}
---with-pcre=../pcre
---with-zlib=../zlib
+pushd nginx-1.18.0
+./configure \
+--prefix=${BOSH_INSTALL_TARGET} \
+--with-pcre=../pcre \
+--with-zlib=../zlib \
 --with-openssl=../openssl
 make
 make install
+popd

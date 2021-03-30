@@ -1,7 +1,0 @@
-set -e
-
-tar -zxf openssl-1.1.1g.tar.gz
-cd openssl-1.1.1g
-./Configure darwin64-x86_64-cc --prefix=${BOSH_INSTALL_TARGET}
-make
-make install

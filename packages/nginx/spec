@@ -1,10 +1,10 @@
 ---
 name: nginx
 
-dependencies:
-  - openssl
-  - pcre
-  - zlib
+dependencies: []
 
 files:
   - nginx-1.18.0.tar.gz
+  - openssl-1.1.1g.tar.gz
+  - pcre-8.44.tar.gz
+  - zlib-1.2.11.tar.gz

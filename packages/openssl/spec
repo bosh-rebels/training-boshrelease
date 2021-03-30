@@ -1,7 +1,0 @@
----
-name: openssl
-
-dependencies: []
-
-files:
-  - openssl-1.1.1g.tar.gz
