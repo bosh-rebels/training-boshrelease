@@ -1,0 +1,8 @@
+---
+name: nginx
+
+templates: {}
+
+packages: []
+
+properties: {}
