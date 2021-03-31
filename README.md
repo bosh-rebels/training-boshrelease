@@ -15,6 +15,7 @@ popd
 Initialising spec testing:
 ```bash
 gem install bundler
+bundle config set path 'vendor/bundle'
 bundle init
 cat<<EOF >> Gemfile
 group :development do
@@ -39,3 +40,8 @@ bundle exec guard
 # or
 bundle exec rspec
 ```
+
+
+## Writing tests
+
+General guides on [testing templates](https://bosh.io/docs/job-templates/) and for [use of properties in them](https://bosh.io/docs/jobs/#properties)
