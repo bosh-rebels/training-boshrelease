@@ -1,9 +1,14 @@
 ---
 name: nginx
 
-templates: {}
+templates:
+  bin/ctl.sh: bin/ctl
+  etc/nginx.conf.erb: etc/nginx.conf
 
 packages:
   - nginx
 
-properties: {}
+properties:
+  port:
+    description: This is the port where the nginx server listens
+    default: 80
