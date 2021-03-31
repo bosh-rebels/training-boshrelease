@@ -25,9 +25,9 @@ tar zxf nginx-1.18.0.tar.gz
 pushd nginx-1.18.0
 ./configure \
 --prefix=${BOSH_INSTALL_TARGET} \
---with-pcre=../pcre \
---with-zlib=../zlib \
---with-openssl=../openssl
+--with-pcre=../pcre-8.44 \
+--with-zlib=../zlib-1.2.11 \
+--with-openssl=../openssl-1.1.1g
 make
 make install
 popd
